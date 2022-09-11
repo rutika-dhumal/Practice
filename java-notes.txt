@@ -1,0 +1,115 @@
+
+There are 8 types of primitive data types- int, char, boolean, byte, long, float, short, double.
+The size of float and double in java is 32 and 64.
+Range of byte data in java is -128 to 127. But the byte data type in java is cyclic in nature.
+
+
+In Java, fields of classes and objects that do not have an explicit initializer and elements of arrays are automatically 
+initialized with the default value for their type (false for boolean, 0 for all numerical types, null for all reference types). 
+Local variables in Java must be definitely assigned to before they are accessed, or it is a compile error.
+class Test {
+  int i;
+} 
+class Main {
+  public static void main(String args[]) { 
+      Test t = new Test(); 
+      System.out.println(t.i);    ---->0
+   } 
+}
+
+
+
+Unlike class members, local variables of methods must be assigned a value to before they are accessed, or it is a compile error.
+class Main {   
+   public static void main(String args[]) {      
+         int t;      
+         System.out.println(t);    ----> compiler error
+    }   
+}
+
+When an array is passed to a method, a reference of the array is received by the method.
+Arrays are objects in java. It is a container that holds a fixed number of items of a single type.
+arrays are objects, they have members like length. The length member is final and cannot be changed. 
+All objects are allocated on heap in Java, so arrays are also allocated on heap.
+
+Java arrays are first class objects and all members of objects are initialized with default values like o, null.
+
+
+
+
+A package is a collection of classes and interfaces.
+
+static keyword
+Static methods must only access static data and can call other static methods. Moreover they cannot refer this or super.
+Static keyword makes a variable belong to a class,rather than being defined for each instance of the class.
+
+when a function is static, runtime polymorphism doesn't happen.
+base class contanis public static show()  ;       and derived contains show method  
+Base b = new Derived();
+        b.show(); ----> it will call  base class method if method is static else it would call derived method and runtime polymorphism happened.
+
+
+use of final keyword in Java-
+When a class is made final, a sublcass of it can not be created.
+
+In Java, methods are virtual by default
+When a method is final, it can not be overridden.
+When a variable is final, it can be assigned value only once.
+
+
+abstract classes in Java
+If we derive an abstract class and do not implement all the abstract methods, then the derived class should also be marked as abstract using 'abstract' keyword
+Abstract classes can have constructors
+A class can be made abstract without any abstract method
+
+
+
+compareTo() returns an int value
+str.substring(start, end) returns the string from s[start] till s[end - 1]
+replace() replaces all the occurrences of the oldcharacter by the newcharacter.
+
+The object created with new keyword during run-time.
+Using the new keyword creates an object everytime. Hence, 2 objects are created for first two statement. Next, a string is declared which creates another object. 
+
+toString() is defined in java.lang.Object.
+string class belongs to java.lang.
+String class has 13 constructors.
+
+floor returns largest integer that is less than or equal to the given number
+
+The system stores parameters and local variables in a stack.
+
+Static cannot be used for constructor.
+instance variables declared in a class for the use of all methods of the class 
+
+Implicit return type of constructor is the class object in which it is defined.
+
+
+inheritance in Java
+In Java all classes inherit from the Object class directly or indirectly. The Object class is root of all classes. 
+Multiple inheritance is not allowed in Java. 
+Unlike C++, there is nothing like type of inheritance in Java where we can specify whether the inheritance is protected,
+public or private.
+
+
+interfaces in java.
+An interface can contain following type of members.  ....public, static, final fields (i.e., constants) 
+....default and static methods with bodies
+A class can implement multiple interfaces.
+Many classes can implement the same interface.
+
+
+Runnable is an interface.
+
+Exception created by try block is caught in catch block.
+
+System class is defined in java.lang.package.
+
+Collection is used to declare core methods in java.
+
+finalize() method is called before garbage collection.
+The finalize() method can be called Zero or one times.
+
+>>>> is Zero fill right shift.
+
+JDB is used to find and fix bugs in the program.

@@ -1,0 +1,23 @@
+// count occurance of word in string
+//https://www.softwaretestinghelp.com/java-coding-interview-programs/
+import java.util.HashMap;
+class OccuranceOfWord {
+    public static void main(String[] args) {
+       HashMap <String,Integer>hashmap = new HashMap<>();
+       String str = "hello hello Hello";
+       
+       String[] str1 = str.split(" ");
+      
+       for(int i=0;i<str1.length ;i++){
+           if(hashmap.containsKey(str1[i])){
+              int count = hashmap.get(str1[i]);
+              hashmap.put(str1[i], count+1); 
+           }
+          else {
+                hashmap.put(str1[i], 1);
+            }
+       }
+       System.out.println(hashmap);
+    }
+}  
+
